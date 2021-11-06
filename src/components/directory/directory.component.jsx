@@ -9,29 +9,31 @@ class DirectoryM extends React.Component {
             sections: [
                 {
                     title: 'hats',
-                    imgUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+                    imgUrl: 'https://cottonon.com/on/demandware.static/-/Library-Sites-cog-megastore-shared-library/default/dwef86c475/group/PLP/SG/05_FY2021_W20849_SEA_M_PLP_D_03.jpg',
                     id: 1
                 }, 
                 {
                     title: 'jackets',
-                    imgUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+                    imgUrl: 'https://assets.adidas.com/images/w_600,f_auto,q_auto/7bd3ca2952434bc6b84aad3700e8b844_9366/Essentials_Insulated_Hooded_Jacket_Beige_GT9157_21_model.jpg',
                     id: 2
                 },
                 {
                     title: 'sneakers',
-                    imgUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+                    imgUrl: 'https://img.alicdn.com/imgextra/i1/3731892581/TB1vB1KX41YBuNjy1zcXXbNcXXa_!!0-item_pic.jpg_640x640q90.jpg',
                     id: 3
                 }
                 ,
                 {
                     title: 'womens',
-                    imgUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+                    imgUrl: 'https://media.cafebabel.com/articles/2016/08/10/womens-fashion-clothes-catalogs.jpg',
+                    size: 'large',
                     id: 4
                 } 
                 ,
                 {
                     title: 'mens',
-                    imgUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+                    imgUrl: 'https://cdn.luxe.digital/media/2019/12/16162209/best-men-online-shopping-jcrew-luxe-digital.jpg',
+                    size: 'large',
                     id: 5
                 }
             ]
