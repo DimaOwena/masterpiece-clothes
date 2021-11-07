@@ -8,7 +8,7 @@ const MenuItem = ({ title, imgUrl, size}) => {
    const navigate = useNavigate();
    return  <div 
         className={`menu-item ${size}`}
-        onClick={() => navigate('hats')}
+        onClick={() => navigate('shop')}
     > 
         <div className='background-image' style={{backgroundImage:`url(${imgUrl})`}}/>
         <div className='content'>
