@@ -2,7 +2,7 @@ import React from 'react';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 import './sign-in.styles.scss';
-import { signInWithGoogle } from '../../firebase/firebase.utils'
+import { auth, signInWithGoogle } from '../../firebase/firebase.utils'
 //class, since we want to store what user typing in
 class SignIn extends React.Component{
     constructor(props) {
@@ -14,11 +14,16 @@ class SignIn extends React.Component{
         }
     }
     
-    handleSubmit = event => {
+    handleSubmit = async event => {
         //prevent default submit action from firing 
         event.preventDefault(); 
-        this.setState({ email:'', password: ''})
-        console.log('submitted')
+        const { email, password } = this.state;
+        try {
+            await auth.signInWithEmailAndPassword(email, password);
+            this.setState({ email: '', password: ''});
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     handleChange = event => {
@@ -50,7 +55,7 @@ class SignIn extends React.Component{
                         required
                     />
                     <div className='buttons'>
-                        <CustomButton type='submit' onSubmit={this.handleSubmit}> Sign in</CustomButton>
+                        <CustomButton type='submit' onClick={this.handleSubmit}> Sign in</CustomButton>
                         <CustomButton  onClick={signInWithGoogle} isGoogleSignIn> Sign in with google</CustomButton>
                     </div>
                 </form>
